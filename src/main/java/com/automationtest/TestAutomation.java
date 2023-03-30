@@ -22,8 +22,7 @@ public class TestAutomation {
     }
 
     @Test
-    //Method to check that this URL successfully loads. This is broken up into 3 categories: protocol, host & file
-    //When executing assertEquals, this combines the 3 variables together into one URL.
+    //Method to check that this URL successfully loads.
     public void givenUrl_whenGetsDefaultPort_thenCorrect() throws MalformedURLException {
         String protocol = "https";
         String host = "amazon.co.uk";
@@ -33,7 +32,7 @@ public class TestAutomation {
         URL url = new URL(protocol, host, file);
         assertEquals("https://amazon.co.uk/gp/bestsellers/?ref_=nav_em_cs_bestsellers_0_1_1_2", url.toString());
     }
-    //The main method just calls out the methods created ensuring that they do indeed work
+    
     public static void main(String[] args) throws MalformedURLException {
 
         System.out.println("Hello world!");
